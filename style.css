@@ -11,7 +11,7 @@ img,
 video,
 svg {
   display: block;
-  height: auto;
+  height: 100%;
   max-width: 100%;
 }
 body {
@@ -130,9 +130,6 @@ p {
 
   .navbar {
     display: none;
-  }
-  .hero img {
-    height: 100%;
   }
   .middle {
     overflow: hidden;
