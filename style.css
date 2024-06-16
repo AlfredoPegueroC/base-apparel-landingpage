@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  min-height: 100dvh;
+  min-width: 100vw;
+  background-color: hsl(0, 100%, 99%);
+  display: flex;
+  justify-content: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+.container {
+  max-width: 375px;
+}
+.navbar {
+  padding: 2rem;
+  width: 50%;
+}
+.logo {
+  display: none;
+}
+.middle {
+  text-align: center;
+}
+.middle .title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  color: hsl(350, 5%, 25%);
+}
+.middle .title > span {
+  font-weight: 300;
+  color: hsl(0, 36%, 70%);
+}
+.middle .description {
+  margin-top: -1rem;
+  color: hsl(0, 36%, 70%);
+  padding-inline: 1.8rem;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.form {
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.form input {
+  position: relative;
+  background-color: hsl(0, 100%, 99%);
+  border: 1px solid hsl(0, 36%, 70%);
+  padding: 0.9rem;
+  border-radius: 30px;
+  width: 70%;
+}
+
+.form input[placeholder] {
+  color: hsl(0, 36%, 70%);
+  padding-inline: 1.5rem;
+}
+.form input:focus {
+  outline: none;
+}
+.form input.error {
+  border: 1px solid hsl(0, 93%, 68%);
+}
+.form.error::before {
+  position: absolute;
+  content: url(./images/icon-error.svg);
+  top: 0.8rem;
+  right: 7.5rem;
+  z-index: 1;
+}
+.form.error::after {
+  position: absolute;
+  content: "Please provide a valid email";
+  font-size: 13px;
+  bottom: -1.5rem;
+  left: 5.2rem;
+  color: hsla(0, 93%, 68%, 0.822);
+}
+.form .btn {
+  position: absolute;
+  right: 3rem;
+  cursor: pointer;
+  padding: 1rem 1.7rem;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+.form .btn:hover {
+  background: hsl(0, 80%, 86%);
+  transform: scale(1.1);
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: auto;
+    outline: 1px solid red;
+  }
+
+  .navbar {
+    display: none;
+  }
+  .middle {
+    text-align: start;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    padding-inline: 6rem;
+    padding-block: 3rem;
+  }
+  .middle .title {
+    margin-top: 7rem;
+    font-size: 4rem;
+    max-width: 400px;
+  }
+  .middle .description {
+    padding: 0;
+    margin-top: -2rem;
+    padding-right: 7rem;
+    font-size: 1.125rem;
+  }
+  .logo {
+    display: block;
+  }
+  .form {
+    max-width: 600px;
+    justify-content: start;
+  }
+  .form .btn {
+    right: 10rem;
+
+    padding: 1rem 2.5rem;
+  }
+
+  .form.error::before {
+    
+    top: 0.9rem;
+    right: 17rem;
+   
+  }
+  .form.error::after {
+    font-size: 1rem;
+    left: 1.5rem;
+    
+  }
+}
